@@ -1,0 +1,41 @@
+<div class="logins_container">
+  <h1 class="logins_header">Sign in to AlbumMaker</h1>
+  <div class="logins">
+
+    <%= render "shared/errors" %>
+
+    <form action="<%= session_url %>" method="post" class="logins">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+      <input type="text" placeholder=" username" name="user[username]" id="user_username">
+      <br>
+
+      <input type="password" placeholder=" password" name="user[password]" id="user_password">
+      <input class="login_submit_button" type="submit">
+      <br>
+
+    </form>
+
+    <form action="<%= session_url %>" method="post">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+      <input type="hidden" placeholder="username" name="user[username]" value="Guest" id="user_username">
+      <br>
+
+      <input type="hidden" placeholder="password" name="user[password]" value="qwerty" id="user_password">
+      <br>
+
+      <button class="guest_button">Sign in as Guest</button>
+    </form>
+  </div>
+
+  <div class="logins_switch">
+    <%= link_to "Or sign up!", new_user_url %>
+  </div>
+</div>
