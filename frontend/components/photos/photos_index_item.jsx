@@ -12,7 +12,7 @@ var PhotoItem = React.createClass({
   render: function() {
     var thumb = this.props.photo.thumbnail;
     return(
-      <li onClick={this.showThisPhoto}>
+      <li className="photo_index_item" onClick={this.showThisPhoto}>
         <img src={thumb}/>
       </li>
     );

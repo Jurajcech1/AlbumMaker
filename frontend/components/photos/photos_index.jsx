@@ -38,9 +38,16 @@ var Photos = React.createClass({
     if (pictures === []) {
       return(<div></div>);
     } else {
+      var albumTag = this.state.album.tag;
+      var beginning = this.state.album.start;
+      var finish = this.state.album.finish;
       return(
         <div>
-          <ul>
+          <div className="index_header_container">
+            <div className="photo_index_header">#{albumTag}</div>
+            <div className="photo_index_range">{beginning} - {finish}</div>
+          </div>
+          <ul className="photo_index_ul">
             {pictures}
           </ul>
         </div>

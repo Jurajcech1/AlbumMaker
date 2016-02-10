@@ -35,9 +35,9 @@ var SearchForm = React.createClass({
       <div className="search_form clearfix">
         <form  onSubmit={this.handleSubmit}>
           <div className="Search_form_header">Search For a Tag</div>
-          <textarea className="Search_form_input" type="text" placeholder="tag" valueLink={this.linkState('tag')}></textarea>
+          <textarea className="Search_form_input" type="text" valueLink={this.linkState('tag')}></textarea>
           <br/>
-          <div className="date_label">start date</div>
+          <div className="start_label">start date</div>
           <input className="start_date" type="date" valueLink={this.linkState('startDate')}/>
           <br/>
           <div className="end_label">end date</div>
