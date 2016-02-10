@@ -12,7 +12,6 @@ var ApiUtil = {
   },
 
   getSearchResults: function(tag, start, end) {
-    debugger;
     $.ajax({
       url: "https://api.instagram.com/v1/tags/" + tag + "/media/recent?access_token=" + INSTAGRAM_API_KEY + "&count=1000",
       dataType: 'jsonp',

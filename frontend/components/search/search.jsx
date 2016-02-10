@@ -21,7 +21,7 @@ var SearchForm = React.createClass({
     var tag = this.state.tag;
     var start = this.state.startDate;
     var end = this.state.endDate;
-    
+
     ApiUtil.getSearchResults(tag, start, end);
     this.redirectToResults();
   },
@@ -34,16 +34,14 @@ var SearchForm = React.createClass({
     return(
       <div className="search_form clearfix">
         <form  onSubmit={this.handleSubmit}>
-          <textarea className="Search_form_header" type="text" placeholder="search tag" valueLink={this.linkState('tag')}></textarea>
+          <div className="Search_form_header">Search For a Tag</div>
+          <textarea className="Search_form_input" type="text" placeholder="tag" valueLink={this.linkState('tag')}></textarea>
           <br/>
-          start date
+          <div className="date_label">start date</div>
+          <input className="start_date" type="date" valueLink={this.linkState('startDate')}/>
           <br/>
-          <input type="date" valueLink={this.linkState('startDate')}/>
-          <br/>
-          <br/>
-          end date
-          <br/>
-          <input type="date" valueLink={this.linkState('endDate')}/>
+          <div className="end_label">end date</div>
+          <input className="end_date" type="date" valueLink={this.linkState('endDate')}/>
           <br/>
           <input className="Search_form_submit" type="submit" value="Search tag" />
         </form>

@@ -31,7 +31,7 @@ var Albums = React.createClass({
     } else {
       return(
         <div>
-          <ul>
+          <ul className="album_index_ul">
             {albums}
           </ul>
         </div>

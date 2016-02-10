@@ -14,7 +14,7 @@ var AlbumItem = React.createClass({
     var start = this.props.album.start;
     var finish = this.props.album.finish;
     return(
-      <li onClick={this.showThisAlbum}>
+      <li className="album_index_item" onClick={this.showThisAlbum}>
         <div>{tag}</div>
         <div>{start} - {finish}</div>
       </li>

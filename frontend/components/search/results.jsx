@@ -55,11 +55,11 @@ var Results = React.createClass({
     } else {
       return(
         <div>
-          <button onClick={this.createAlbum}>create album</button>
-          <ul>
+          <button className="create_album_button" onClick={this.createAlbum}>create album</button>
+          <ul className="search_results_index">
             {photos}
           </ul>
-          <button onClick={this.paginate}>load more</button>
+          <button className="load_more_button" onClick={this.paginate}>load more</button>
         </div>
       );
     }

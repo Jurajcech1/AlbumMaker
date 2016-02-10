@@ -29,6 +29,11 @@ var PhotoShow = React.createClass({
     this.photoShowUpdater.remove();
   },
 
+  openNativeLink: function() {
+    var link = this.state.photo.native_link;
+    window.open(link);
+  },
+
   render: function() {
     var photo = this.state.photo;
     var mediaObject;
@@ -40,6 +45,7 @@ var PhotoShow = React.createClass({
       }
       return(
         <div>
+          <div onClick={this.openNativeLink}>open in instagram</div>
           <div>{photo.creator}</div>
           {mediaObject}
         </div>

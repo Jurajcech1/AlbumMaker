@@ -25,7 +25,7 @@ var ResultsItem = React.createClass({
       theMediaObject = <div><video src={video} autoPlay loop controls ></video></div>;
     }
     return(
-      <li>{theMediaObject}</li>
+      <li className="search_results_item">{theMediaObject}</li>
     );
   }
 });
