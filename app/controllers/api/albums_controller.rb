@@ -1,6 +1,6 @@
 class Api::AlbumsController < ApplicationController
   def index
-    @albums = Album.current_user_albums(current_user.id)
+    @albums = Album.current_user_albums(current_user.id).reverse
     render :index
   end
 
