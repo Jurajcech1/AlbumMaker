@@ -22,7 +22,7 @@ var ResultsItem = React.createClass({
       theMediaObject = <div><img src={picture}/></div>;
     } else {
       var video = this.props.photo.videos.standard_resolution.url;
-      theMediaObject = <div><video src={video} autoPlay loop controls ></video></div>;
+      theMediaObject = <div><video src={video} loop controls ></video></div>;
     }
     return(
       <li className="search_results_item">{theMediaObject}</li>
