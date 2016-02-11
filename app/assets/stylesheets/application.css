@@ -68,10 +68,20 @@ html {
 
 .login_submit_button {
   margin: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.login_submit_button:hover {
+  cursor: pointer;
 }
 
 .guest_button {
   margin-bottom: 5px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.guest_button {
+  cursor: pointer;
 }
 
 .logins_switch {
