@@ -3,7 +3,7 @@
   <div class="logins">
 
     <%= render "shared/errors" %>
-
+    <div class="logins_border">
     <form action="<%= session_url %>" method="post" class="logins">
       <input
         type="hidden"
@@ -13,12 +13,12 @@
       <input type="text" placeholder=" username" name="user[username]" id="user_username">
       <br>
 
-      <input type="password" placeholder=" password" name="user[password]" id="user_password">
-      <input class="login_submit_button" type="submit">
+      <input type="password" placeholder=" password" name="user[password]" id="user_password_in">
+      <input class="login_submit_button" type="submit" value="Sign In">
       <br>
 
     </form>
-
+    <div class="login_or">Or</div>
     <form action="<%= session_url %>" method="post">
       <input
         type="hidden"
@@ -26,16 +26,17 @@
         value="<%= form_authenticity_token %>">
 
       <input type="hidden" placeholder="username" name="user[username]" value="Guest" id="user_username">
-      <br>
+
 
       <input type="hidden" placeholder="password" name="user[password]" value="qwerty" id="user_password">
-      <br>
+
 
       <button class="guest_button">Sign in as Guest</button>
     </form>
   </div>
+  </div>
 
   <div class="logins_switch">
-    <%= link_to "Or sign up!", new_user_url %>
+    <%= link_to "Not a member?", new_user_url %>
   </div>
 </div>

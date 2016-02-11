@@ -39,14 +39,14 @@ var PhotoShow = React.createClass({
     var mediaObject;
     if (photo) {
       if (photo.vid_or_pic === "video") {
-        mediaObject = <video src={photo.photo_url} autoPlay loop controls></video>;
+        mediaObject = <video className="media_object" src={photo.photo_url} autoPlay loop controls></video>;
       } else {
-        mediaObject = <img src={photo.photo_url}/>;
+        mediaObject = <img className="media_object" src={photo.photo_url}/>;
       }
       return(
-        <div>
-          <div onClick={this.openNativeLink}>open in instagram</div>
-          <div>{photo.creator}</div>
+        <div className="photo_show_div">
+          <div className="photo_creator">User: {photo.creator}</div>
+          <div className="native_link" onClick={this.openNativeLink}>Open in Instagram</div>
           {mediaObject}
         </div>
       );
