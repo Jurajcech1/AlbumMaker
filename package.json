@@ -7,11 +7,16 @@
     "test": "test"
   },
   "scripts": {
+    "postinstall": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
   "dependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
